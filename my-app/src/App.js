@@ -19,10 +19,11 @@ function App() {
         </div>
         <div>
           <h1>Marleen Muñoz</h1>
-          <h3>Frontend Developer</h3>
+          <h4>Mathematics Applied and Computer Science student</h4>
         </div>
       </header>
       <hr size="2px" width="80%" noshade="noshade" align="center" />
+      
       <div className='Content'>
         <h2>Press a button to get the link</h2>
         <BotonesUrl/>

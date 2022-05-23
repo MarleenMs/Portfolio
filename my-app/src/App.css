@@ -40,6 +40,7 @@ h1{
 }
 
 .App-button {
+  margin-left: 10px;
   background-color: #EDF7F6;
   border-radius: 6px;
   font-size: 20px;
