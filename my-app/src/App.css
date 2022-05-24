@@ -32,11 +32,23 @@
 }
 h1{
   color: rgb(156, 79, 111);
+  text-shadow: 2px 2px 10px rgb(148, 125, 135);
 }
 
 .App-link {
   font-size: 20px;
   color: #45739b;
+}
+
+.App-button:hover {
+  background-color: #4999af;
+  color: white;
+}
+
+.App-button:active {
+  background-color: #4999af;
+  box-shadow: 0 2px gray;
+  transform: translateY(2px);
 }
 
 .App-button {
@@ -49,17 +61,6 @@ h1{
   cursor: pointer;
   transition-duration: 0.4s;
   width: 150px;
-}
-
-.App-button:hover {
-  background-color: #4999af;
-  color: white;
-}
-
-.App-button:active {
-  background-color: #4999af;
-  box-shadow: 0 2px gray;
-  transform: translateY(2px);
 }
 
 .App-Photo{
