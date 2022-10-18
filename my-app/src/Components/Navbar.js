@@ -84,8 +84,14 @@ const useStyles = makeStyles((theme) => ({
         "& a": {
             color: "#333",
             fontSize: "1.2rem",
+            fontWeight: "bold",
             marginLeft: theme.spacing(3),
             marginRight: theme.spacing(1)
+        },
+        "& a:hover": {
+            cursor: "pointer",
+            color: "#222c76",
+            borderBottom: "3px solid #222c76"
         }
     }
 }))
