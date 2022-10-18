@@ -7,17 +7,6 @@
   color: rgb(103, 81, 81);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   padding: 25px 0;
   gap: 20px;
@@ -64,20 +53,19 @@ h1{
 }
 
 .App-Photo{
-  height:200px
+  height:200px;
 }
-img{
+
+.my-photo{
   width: 200px;
   border-radius: 50%;
-  border: 5px solid #EDF7F6;
- }
- 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: 5px; 
+  border-style: solid #EDF7F6;
 }
+
+ 
+.Contact{
+  width: auto;
+  margin-left: auto;
+}
+
