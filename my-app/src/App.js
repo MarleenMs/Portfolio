@@ -2,7 +2,6 @@ import './App.css';
 import React from "react";
 import profile from "./Images/foto_perfil.jpg";
 import BotonesUrl from './Components/Links';
-import Contador from './Components/Contador';
 
 //jsx
 //clases y funciones 
@@ -20,7 +19,7 @@ function App() {
         </div>
         <div>
           <h1>Marleen Muñoz</h1>
-          <h4>Applied Mathematics and Computer Science student</h4>
+          <h4>Applied Mathematics and Computer Science Degree</h4>
         </div>
       </header>
       <hr size="2px" width="80%" noshade="noshade" align="center" color="white" />
@@ -29,8 +28,6 @@ function App() {
         <h2>Press a button to get the link</h2>
         <BotonesUrl/>
 
-        <h2>Press a button to add 1 to the counter</h2>
-        <Contador/>
       </div>
       
     </div>
