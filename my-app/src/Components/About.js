@@ -5,7 +5,9 @@ const About = ({title, dark, id}) => {
    const classes = useStyles();
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
-        About
+        <div className={classes.sectioncontent}>
+
+        </div>
     </div>
   )
 }
