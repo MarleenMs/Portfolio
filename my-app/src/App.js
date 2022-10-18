@@ -1,6 +1,5 @@
 import './App.css';
 import React from "react";
-import profile from "./Images/foto_perfil.jpg";
 import {makeStyles} from "@material-ui/core"
 import Navbar from './Components/Navbar';
 import Certifications from './Components/Certifications';
@@ -20,22 +19,11 @@ function App() {
       <Certifications title= "Certifications" id="certifications" dark={false}/>
       <Contact title= "Contact" id= "contact" dark={true}/>
       <header className="App-header">
-        <div className= "App-Photo">
-          <img className='my-photo' src = {profile} alt= "Me" />
-        </div>
-        <div>
-          <h1>Marleen Muñoz Sala</h1>
-          <h4>Developer Jr.</h4>
-        </div>
+        
       </header>
       
       <hr size="2px" width="80%" noshade="noshade" align="center" color="white" />
 
-      <div className='Content'>
-        
-
-      </div>
-      
     </div>
   );
 }

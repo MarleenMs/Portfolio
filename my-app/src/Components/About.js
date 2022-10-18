@@ -1,5 +1,6 @@
 import React from 'react'
 import {makeStyles, Typography} from "@material-ui/core"
+import profile from "../Images/foto_perfil.jpg";
 
 const About = ({title, dark, id}) => {
    const classes = useStyles();
@@ -7,6 +8,9 @@ const About = ({title, dark, id}) => {
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
         <div className={classes.sectioncontent} id={id}>
             <Typography variant= "h3">{title}</Typography>
+        </div>
+        <div className= "App-Photo">
+          <img className='my-photo' src = {profile} alt= "Me" />
         </div>
     </div>
   )

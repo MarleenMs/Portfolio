@@ -42,7 +42,15 @@ const Navbar = () => {
                 <List className = {classes.menu} >
                     {
                         links.map(({id, text}, index) => (
-                            <Link key={index} to = {id} spy={true} smooth={true} activeclass= "active" duration={500} offset={-70}>{text}</Link>
+                            <Link key={index} 
+                                to = {id} 
+                                spy={true} 
+                                smooth={true} 
+                                activeclass= "active" 
+                                duration={500} 
+                                offset={-80}>
+                                {text}
+                            </Link>
                         ))
                     }
                 </List>
