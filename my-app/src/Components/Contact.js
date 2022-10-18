@@ -1,13 +1,15 @@
 import React, {useState} from "react";
 import {FaLinkedin,FaGithub, FaRegEnvelope } from 'react-icons/fa';
-import {makeStyles} from "@material-ui/core"
+import {makeStyles, Typography} from "@material-ui/core"
 
 function BotonesUrl({title, dark, id}){
     const [link, setLink] = useState(" ");
     const classes = useStyles();
     return(
         <div className={`${classes.section} ${dark && classes.sectiondark}`}>
-            Contact
+            <div className={classes.sectioncontent} id={id}>
+                <Typography variant= "h3">{title}</Typography>
+            </div>
             <br/>
             <button
                 className="App-button"
@@ -48,6 +50,10 @@ const useStyles = makeStyles((theme) => ({
   sectiondark:{
     background: "#333",
     color: "#FFF"
+  },
+  sectioncontent: {
+    maxWidht: "70vx",
+    marginLeft: "100px",
   }
 }))
 

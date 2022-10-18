@@ -1,7 +1,6 @@
 import './App.css';
 import React from "react";
 import profile from "./Images/foto_perfil.jpg";
-import BotonesUrl from './Components/Contact';
 import {makeStyles} from "@material-ui/core"
 import Navbar from './Components/Navbar';
 import Certifications from './Components/Certifications';
@@ -17,7 +16,7 @@ function App() {
       <Navbar/>
       <About title= "About Me" id= "about" dark={true}/>
       <Experience title= "Experience" id= "experience" dark={false}/>
-      <Skills title= "Skills" id= "sjills" dark={true}/>
+      <Skills title= "Skills" id= "skills" dark={true}/>
       <Certifications title= "Certifications" id="certifications" dark={false}/>
       <Contact title= "Contact" id= "contact" dark={true}/>
       <header className="App-header">
@@ -29,10 +28,7 @@ function App() {
           <h4>Developer Jr.</h4>
         </div>
       </header>
-      <div className='Contact'>
-          <h3>Contact</h3>
-          <BotonesUrl/>
-        </div>
+      
       <hr size="2px" width="80%" noshade="noshade" align="center" color="white" />
 
       <div className='Content'>

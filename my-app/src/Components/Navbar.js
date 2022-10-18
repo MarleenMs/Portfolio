@@ -12,14 +12,14 @@ const links = [
         icon: <FontAwesomeIcon icon="fa-regular fa-address-card" />
     },
     {
+        id: "experience",
+        text: "Experience  ",
+        icon: <FontAwesomeIcon icon="fa-regular fa-briefcase-blank" />
+    },
+    {
         id: "skills",
         text: "Skills  ",
         icon: <FontAwesomeIcon icon="fa-light fa-toolbox" />
-    },
-    {
-        id: "contact",
-        text: "Contact  ",
-        icon: <FontAwesomeIcon icon="fa-regular fa-address-book" />
     },
     {
         id: "certifications",
@@ -27,9 +27,9 @@ const links = [
         icon: <FontAwesomeIcon icon="fa-regular fa-file-certificate" />
     },
     {
-        id: "experience",
-        text: "Experience  ",
-        icon: <FontAwesomeIcon icon="fa-regular fa-briefcase-blank" />
+        id: "contact",
+        text: "Contact  ",
+        icon: <FontAwesomeIcon icon="fa-regular fa-address-book" />
     },
 ]
 
@@ -42,7 +42,7 @@ const Navbar = () => {
                 <List className = {classes.menu} >
                     {
                         links.map(({id, text}, index) => (
-                            <Link key={index} to = {id} spy={true} smooth={true} duration={500} offset={-70}>{text}</Link>
+                            <Link key={index} to = {id} spy={true} smooth={true} activeclass= "active" duration={500} offset={-70}>{text}</Link>
                         ))
                     }
                 </List>
