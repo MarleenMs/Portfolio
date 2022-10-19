@@ -62,8 +62,8 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "30px",
   },
   image: {
-    marginLeft: "-100px",
-    marginTop: "-40px"
+    marginLeft: "-30px",
+    marginTop: "10px"
   },
     
 }))
