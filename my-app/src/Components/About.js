@@ -20,7 +20,7 @@ const About = ({title, dark, id}) => {
                     text= "Hi! I am Marleen Muñoz,"
                     textStyle={
                       {
-                        fontSize: "2rem",
+                        fontSize: "2.3rem",
                         fontWeight: "700px",
                         color: "#a085c3",
                         textShadow: "2px 2px 10px rgb(148, 125, 135)",
@@ -32,10 +32,10 @@ const About = ({title, dark, id}) => {
                   />
                   <br/>
                   <TypeWriterEffect
-                    text= "And I'm a Jr. Developer"
+                    text= "I'm a Jr. Developer"
                     textStyle={
                       {
-                        fontSize: "1.3rem",
+                        fontSize: "1.6rem",
                         fontWeight: "700px",
                         color: "#333",
                       }
@@ -45,8 +45,9 @@ const About = ({title, dark, id}) => {
                     cursorColor= "#898fb5"
                   />
                   <br/>
+                  <div className={classes.cardtext}>
                   <TypeWriterEffect
-                    text= "I'm a graduate with extensive knowledge of programming in high-level languages. I seek to continue learning while I contribute to the development of the company."
+                    text= "I graduate with extensive knowledge of programming in high-level languages. I seek to continue learning while I contribute to the development of the company."
                     textStyle={
                       {
                         fontSize: "1.3rem",
@@ -58,6 +59,7 @@ const About = ({title, dark, id}) => {
                     typeSpeed={50}
                     cursorColor= "#898fb5"
                   />
+                  </div>
                 </CardContent>
   
                 <CardActions>
@@ -102,21 +104,34 @@ const useStyles = makeStyles((theme) => ({
   CardContent:{
     margin: theme.spacing(2,2,0,2),
   },
+  cardtext:{
+    [theme.breakpoints.down("xs")]:{
+      display: "none",
+    },
+  },
   cardMedia:{
-    [theme.breakpoints.down("sm")]:{
+    [theme.breakpoints.down("xs")]:{
       maxWidht: 300,
       maxHeight: 300,
-      marginLeft: 50,
+      marginLeft: 40,
+      marginRight: -20,
+      marginTop: 10,
+      width: "80%",
+    },
+    [theme.breakpoints.only("sm")]:{
+      maxWidht: 450,
+      maxHeight: 450,
+      marginLeft: 150,
       marginRight: "auto",
       marginTop: 10,
-      width: "70%",
+      width: "60%",
     },
     border: "80px", 
     objectFit: "cover",
   },
   cvButton:{
     [theme.breakpoints.down("sm")]:{
-      marginBottom: "-40px",
+      marginBottom: "-20px",
       right: "8.5rem",
     },
     position: "absolute",
