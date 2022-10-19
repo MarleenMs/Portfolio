@@ -99,6 +99,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     margin: theme.spacing(2,13,0,0)
   },
+  CardContent:{
+    margin: theme.spacing(2,2,0,2),
+  },
   cardMedia:{
     [theme.breakpoints.down("sm")]:{
       maxWidht: 300,
