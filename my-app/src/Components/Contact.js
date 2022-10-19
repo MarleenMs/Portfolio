@@ -1,5 +1,7 @@
 import React, {useState} from "react";
-import {FaLinkedin,FaGithub, FaRegEnvelope } from 'react-icons/fa';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
 import {Button, Card, CardContent, makeStyles, Typography} from "@material-ui/core"
 import CardActions from "@material-ui/core/CardActions/CardActions";
 
@@ -14,22 +16,22 @@ function Contact({title, dark, id}){
                 <Card className={classes.card}>
                   <CardContent className={classes.CardContent}>
                     <CardActions>
+                      <Button
+                        className={classes.cvButton}
+                        onClick={() => setLink("https://www.linkedin.com/in/marleen-munoz-sala/")}
+                      ><LinkedInIcon /> LinkedIn</Button>
+          
                     <Button
-                      className={classes.cvButton}
-                      onClick={() => setLink("https://www.linkedin.com/in/marleen-munoz-sala/")}
-                    ><FaLinkedin/> LinkedIn</Button>
-        
-                  <Button
-                      className={classes.cvButton}
-                      type="button"
-                      onClick={() => setLink("https://github.com/MarleenMs")}
-                    ><FaGithub/> Github</Button>  
+                        className={classes.cvButton}
+                        type="button"
+                        onClick={() => setLink("https://github.com/MarleenMs")}
+                      ><GitHubIcon/> Github</Button>  
 
-                  <Button
-                      className={classes.cvButton}
-                      type="button"
-                      onClick={() => setLink("marleen.ms99@gmail.com")}
-                    ><FaRegEnvelope/> Correo</Button>   
+                    <Button
+                        className={classes.cvButton}
+                        type="button"
+                        onClick={() => setLink("marleen.ms99@gmail.com")}
+                      ><EmailIcon /> Correo</Button>   
               </CardActions> 
 
             <br/><br/>
