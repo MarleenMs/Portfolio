@@ -20,6 +20,10 @@ h3{
   text-shadow: 2px 2px 10px rgb(148, 125, 135);
 }
 
+h5{
+  text-shadow: 2px 2px 10px rgb(148, 125, 135);
+}
+
 .App-link {
   font-size: 20px;
   color: #45739b;
