@@ -22,7 +22,7 @@ function App() {
         
       </header>
       
-      <hr size="2px" width="80%" noshade="noshade" align="center" color="white" />
+      
 
     </div>
   );

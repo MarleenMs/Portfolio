@@ -1,10 +1,6 @@
 .App {
   text-align: center;
-  background-color: #51E2F5; /* For browsers that do not support gradients */
-  background-image: linear-gradient(109.6deg, #51E2F5 1.8%, #EDF7F6 50.6%, #A28089 100.3%);
-  background-repeat: no-repeat;
   min-height: 600px;
-  color: rgb(103, 81, 81);
 }
 
 .App-header {
@@ -19,8 +15,8 @@
   font-size: calc(10px + 2vmin);
   
 }
-h1{
-  color: rgb(156, 79, 111);
+
+h3{
   text-shadow: 2px 2px 10px rgb(148, 125, 135);
 }
 
