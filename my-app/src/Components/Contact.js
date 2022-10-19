@@ -1,33 +1,37 @@
 import React, {useState} from "react";
 import {FaLinkedin,FaGithub, FaRegEnvelope } from 'react-icons/fa';
-import {makeStyles, Typography} from "@material-ui/core"
+import {Button, Card, CardContent, makeStyles, Typography} from "@material-ui/core"
+import CardActions from "@material-ui/core/CardActions/CardActions";
 
-function BotonesUrl({title, dark, id}){
+function Contact({title, dark, id}){
     const [link, setLink] = useState(" ");
     const classes = useStyles();
     return(
         <div className={`${classes.section} ${dark && classes.sectiondark}`}>
             <div className={classes.sectioncontent} id={id}>
+                <br/>
                 <Typography variant= "h3">{title}</Typography>
-            </div>
-            <br/>
-            <button
-                className="App-button"
-                type="button"
-                onClick={() => setLink("https://www.linkedin.com/in/marleen-munoz-sala/")}
-              ><FaLinkedin/> LinkedIn</button>
+                <Card className={classes.card}>
+                  <CardContent className={classes.CardContent}>
+                    <CardActions>
+                    <Button
+                      className={classes.cvButton}
+                      onClick={() => setLink("https://www.linkedin.com/in/marleen-munoz-sala/")}
+                    ><FaLinkedin/> LinkedIn</Button>
         
-            <button
-                className="App-button"
-                type="button"
-                onClick={() => setLink("https://github.com/MarleenMs")}
-              ><FaGithub/> Github</button>  
+                  <Button
+                      className={classes.cvButton}
+                      type="button"
+                      onClick={() => setLink("https://github.com/MarleenMs")}
+                    ><FaGithub/> Github</Button>  
 
-            <button
-                className="App-button"
-                type="button"
-                onClick={() => setLink("marleen.ms99@gmail.com")}
-              ><FaRegEnvelope/> Correo</button>    
+                  <Button
+                      className={classes.cvButton}
+                      type="button"
+                      onClick={() => setLink("marleen.ms99@gmail.com")}
+                    ><FaRegEnvelope/> Correo</Button>   
+              </CardActions> 
+
             <br/><br/>
             <p>
                 <a
@@ -39,6 +43,12 @@ function BotonesUrl({title, dark, id}){
                     {link}
                 </a> 
             </p>
+                  </CardContent>
+
+                </Card>
+            </div>
+            <br/>
+            
         </div>
     );
 }
@@ -59,8 +69,44 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(0,0,0,6),
       fontSize: "2.1rem",
     },
-  }
+  },
+  card:{
+    height: "70vh",
+    display: "flex",
+    margin: theme.spacing(2,13,0,0)
+  },
+  cardMedia:{
+    borderRadius: "10px",
+    border: "80px", 
+    objectFit: "cover",
+  },
+  cvButton:{
+    position: "absolute",
+    bottom: 90,
+    right: 350,
+    color: "#292673",
+    backgroundColor: "#f0f1f6",
+    borderRadius: "6px",
+    fontSize: "13px",
+    border: "2px solid #d3d5e3",
+    cursor: "pointer",
+    transitionDuration: "0.4s",
+    display: "inline-block",
+    fontWeight: "bold",
+    "&:hover": {
+      backgroundColor: "#d0c3e1",
+      color: "white",
+    },
+    "& a": {
+      color: "#a186c3",
+      textDecoration: "none",
+    },
+    "& a:hover": {
+      color: "white",
+
+    },
+  },
 }))
 
 
-export default BotonesUrl
+export default Contact
