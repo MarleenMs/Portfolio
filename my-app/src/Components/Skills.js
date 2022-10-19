@@ -2,6 +2,7 @@ import React from 'react';
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 import CardLanguages from "./CardLanguages.js";
 import OtherSkills from "./OtherSkills.js";
+import puzzle from "../Images/piezas_rompecabezas.png"
 
 const Skills = ({title, dark, id}) => {
   const classes = useStyles();
@@ -16,6 +17,9 @@ const Skills = ({title, dark, id}) => {
               </Grid>
               <Grid item xs={8} sm={3} md={4}>
                   <OtherSkills/>
+              </Grid>
+              <Grid item xs={8} sm={3} md={4}>
+                  <img className={classes.image} src = {puzzle} alt= "puzzle"/>
               </Grid>
             </Grid>
             <br/>
@@ -34,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#292673",
     color: "#f1eedb",
     minHeight: "100vh",
-    maxHeight: "auto",
   },
   sectioncontent: {
     maxWidht: "auto",
@@ -57,6 +60,10 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(3),
     margin: "16px 16px 24px 2px",
     minWidth: "30px",
+  },
+  image: {
+    marginLeft: "-100px",
+    marginTop: "-40px"
   },
     
 }))
