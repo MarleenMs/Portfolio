@@ -10,7 +10,7 @@ const Experience = ({title, dark, id}) => {
             <Typography variant= "h3">{title}</Typography>
             <Card className={classes.card}>
                 <CardContent className={classes.CardContent}>
-
+    
                 </CardContent>
             </Card>
         </div>
