@@ -1,43 +1,52 @@
-import { IconButton, List, makeStyles, Toolbar } from "@material-ui/core";
+import { Divider, Drawer, IconButton, List, ListItem, makeStyles, Toolbar } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import React from "react";
 import Logo from "../Images/Logo2.png"
-import {Link, animateScroll as scroll} from "react-scroll"
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Link} from "react-scroll"
 import MenuIcon from "@mui/icons-material/Menu"
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import CancelIcon from "@mui/icons-material/Cancel"
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import {useState} from "react"
+import ListItemIcon from "@material-ui/core/ListItemIcon/ListItemIcon";
 
-
+//animateScroll as scroll
 const links = [
     {
         id: "about",
         text: "About me  ",
-        icon: <FontAwesomeIcon icon="fa-regular fa-address-card" />
+        icon_link: <AccountCircleIcon fontSize="large"/>
     },
     {
         id: "experience",
         text: "Experience  ",
-        icon: <FontAwesomeIcon icon="fa-regular fa-briefcase-blank" />
+        icon_link: <WorkHistoryIcon fontSize="large"/>
     },
     {
         id: "skills",
         text: "Skills  ",
-        icon: <FontAwesomeIcon icon="fa-light fa-toolbox" />
+        icon_link: <AutoFixHighIcon fontSize="large"/>
     },
     {
         id: "certifications",
         text: "Certifications  ",
-        icon: <FontAwesomeIcon icon="fa-regular fa-file-certificate" />
+        icon_link: <WorkspacePremiumIcon fontSize="large"/>
     },
     {
         id: "contact",
         text: "Contact  ",
-        icon: <FontAwesomeIcon icon="fa-regular fa-address-book" />
+        icon_link: <ContactPageIcon fontSize="large"/>
     },
 ]
 
 const Navbar = () => {
     const classes = useStyles();
+    const [open, setOpen] = useState(false);
     return(
+    <>
         <AppBar position="sticky" className = {classes.root}>
             <Toolbar className= {classes.toolbar}>
                 <img src= {Logo} className = {classes.logo} alt = "Logo" />
@@ -56,11 +65,39 @@ const Navbar = () => {
                         ))
                     }
                 </List>
-                <IconButton edge="end" className={classes.menubutton}>
+                <IconButton edge="end" className={classes.menubutton} onClick={() => setOpen(!open)}>
                     <MenuIcon fontSize="large"/>
                 </IconButton>
             </Toolbar>
         </AppBar>
+        <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+            <IconButton className={classes.closebutton} onClick = {() => setOpen(false)}>
+                <CancelIcon/>
+            </IconButton>
+            <Divider/>
+            {
+                links.map(({id, text, icon_link}, index) => (
+                    <Link key={index} 
+                        className ={classes.sidebar}
+                        to = {id} 
+                        spy={true} 
+                        smooth={true} 
+                        activeclass= "active" 
+                        duration={500} 
+                        offset={-80}>
+                        <ListItem component = "h5">
+                            <span>
+                                <ListItemIcon>
+                                    {icon_link}
+                                </ListItemIcon>
+                            </span> {text}
+                        </ListItem>
+                    </Link>
+                ))
+            }
+
+        </Drawer>
+    </>
     )
 }
 
@@ -108,7 +145,24 @@ const useStyles = makeStyles((theme) => ({
         position: "absolute",
         top: 12,
         right: 20,
+    },
+    closebsideutton:{
+        
+        color: "#222c76",
+        
+        top: 12,
+        right: 20,
+    },
+    sidebar:{
+        width: "40vw",
+        [theme.breakpoints.down("sm")]:{
+            width: "50vw",
+        },
+        "& h5":{
+            margin: theme.spacing(10,0,0,4)
         }
+    }
+    
 }))
 
 
