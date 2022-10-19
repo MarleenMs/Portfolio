@@ -36,6 +36,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   card:{
+    [theme.breakpoints.down("sm")]:{
+      height: "80vh",
+      margin: theme.spacing(2,3,0,-10),
+      display: "block",
+    },
     height: "70vh",
     display: "flex",
     margin: theme.spacing(2,13,0,0)

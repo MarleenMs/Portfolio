@@ -14,7 +14,7 @@ const About = ({title, dark, id}) => {
             <br/>
             <Typography variant= "h3">{title}</Typography>
             <Card className={classes.card}>
-                <img src = {profile} alt= "Me" />
+                <img className={classes.cardMedia} src = {profile} alt= "Me" />
                 <CardContent className={classes.CardContent}>
                   <TypeWriterEffect 
                     text= "Hi! I am Marleen Muñoz,"
@@ -90,16 +90,32 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   card:{
+    [theme.breakpoints.down("sm")]:{
+      height: "80vh",
+      margin: theme.spacing(2,3,0,-10),
+      display: "block",
+    },
     height: "70vh",
     display: "flex",
     margin: theme.spacing(2,13,0,0)
   },
   cardMedia:{
-    borderRadius: "10px",
+    [theme.breakpoints.down("sm")]:{
+      maxWidht: 300,
+      maxHeight: 300,
+      marginLeft: 50,
+      marginRight: "auto",
+      marginTop: 10,
+      width: "70%",
+    },
     border: "80px", 
     objectFit: "cover",
   },
   cvButton:{
+    [theme.breakpoints.down("sm")]:{
+      marginBottom: "-18px",
+      right: "8.5rem",
+    },
     position: "absolute",
     bottom: 90,
     right: 350,
