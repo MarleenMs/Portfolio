@@ -1,9 +1,11 @@
-import { List, makeStyles, Toolbar } from "@material-ui/core";
+import { IconButton, List, makeStyles, Toolbar } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import React from "react";
 import Logo from "../Images/Logo2.png"
 import {Link, animateScroll as scroll} from "react-scroll"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import MenuIcon from "@mui/icons-material/Menu"
+
 
 const links = [
     {
@@ -54,6 +56,9 @@ const Navbar = () => {
                         ))
                     }
                 </List>
+                <IconButton edge="end" className={classes.menubutton}>
+                    <MenuIcon fontSize="large"/>
+                </IconButton>
             </Toolbar>
         </AppBar>
     )
@@ -93,7 +98,17 @@ const useStyles = makeStyles((theme) => ({
             color: "#222c76",
             borderBottom: "3px solid #222c76"
         }
-    }
+    },
+    menubutton:{
+        display: "none",
+        [theme.breakpoints.down("sm")]:{
+            display: "block"
+        },
+        color: "#222c76",
+        position: "absolute",
+        top: 12,
+        right: 20,
+        }
 }))
 
 
