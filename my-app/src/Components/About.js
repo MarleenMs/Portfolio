@@ -9,7 +9,7 @@ const About = ({title, dark, id}) => {
         <div className={classes.sectioncontent} id={id}>
             <Typography variant= "h3">{title}</Typography>
         </div>
-        <div className= "App-Photo">
+        <div className= "Photo">
           <img className='my-photo' src = {profile} alt= "Me" />
         </div>
     </div>
@@ -19,14 +19,19 @@ const About = ({title, dark, id}) => {
 const useStyles = makeStyles((theme) => ({
   section:{
     minHeight: "100vh",
+    color: "#292673",
   },
   sectiondark:{
-    background: "#333",
-    color: "#FFF"
+    backgroundColor: "#292673",
+    color: "#f1eedb",
   },
   sectioncontent: {
     maxWidht: "80vx",
     marginLeft: "100px",
+    "& h3": {
+      margin: theme.spacing(0,0,0,6),
+      fontSize: "2.1rem",
+    },
   }
 }))
 

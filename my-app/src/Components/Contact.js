@@ -46,14 +46,19 @@ function BotonesUrl({title, dark, id}){
 const useStyles = makeStyles((theme) => ({
   section:{
     minHeight: "100vh",
+    color: "#292673",
   },
   sectiondark:{
-    background: "#333",
-    color: "#FFF"
+    backgroundColor: "#292673",
+    color: "#f1eedb",
   },
   sectioncontent: {
-    maxWidht: "70vx",
+    maxWidht: "80vx",
     marginLeft: "100px",
+    "& h3": {
+      margin: theme.spacing(0,0,0,6),
+      fontSize: "2.1rem",
+    },
   }
 }))
 
