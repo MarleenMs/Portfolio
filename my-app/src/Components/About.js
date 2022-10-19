@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cvButton:{
     [theme.breakpoints.down("sm")]:{
-      marginBottom: "-18px",
+      marginBottom: "-40px",
       right: "8.5rem",
     },
     position: "absolute",
