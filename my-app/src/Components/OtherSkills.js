@@ -39,7 +39,9 @@ const OtherSkills = () => {
             <ListItemText primary="Scrum Methodology" />
           </ListItemButton>
         </List>
+        
         <br/>
+
         <List>
           <ListItemButton onClick={handleClick}>
               <ListItemIcon><FiberManualRecordIcon color="primary" fontSize='xs'/></ListItemIcon>
@@ -56,11 +58,8 @@ const OtherSkills = () => {
               </List>
           </Collapse>
 
-
         </List>
-
-        </CardContent>
-      
+      </CardContent>
     </Card>
   );
 }
