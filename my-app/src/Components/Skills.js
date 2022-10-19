@@ -162,24 +162,27 @@ const Skills = ({title, dark, id}) => {
                   <Typography fontSize="50px" color="#333" >
 
                     <List>
-                      <ListItemButton className={classes.icon}>
-                        <ListItemIcon><FiberManualRecordIcon fontSize='xs'/></ListItemIcon>
+                      <ListItemButton className={classes.icon}>"
+                        <ListItemIcon><FiberManualRecordIcon color="secondary" fontSize='xs'/></ListItemIcon>
                         <ListItemText primary="Linux / Windows" />
                       </ListItemButton>
                       <ListItemButton>
-                        <ListItemIcon><FiberManualRecordIcon fontSize='xs'/></ListItemIcon>
+                        <ListItemIcon><FiberManualRecordIcon color="secondary" fontSize='xs'/></ListItemIcon>
                         <ListItemText primary="Microsoft Office Package" />
                       </ListItemButton>
                       <ListItemButton>
-                        <ListItemIcon><FiberManualRecordIcon fontSize='xs'/></ListItemIcon>
+                        <ListItemIcon><FiberManualRecordIcon color="secondary" fontSize='xs'/></ListItemIcon>
                         <ListItemText primary="Git / Github" />
                       </ListItemButton>
                       <ListItemButton>
-                        <ListItemIcon><FiberManualRecordIcon fontSize='xs'/></ListItemIcon>
+                        <ListItemIcon><FiberManualRecordIcon color="secondary" fontSize='xs'/></ListItemIcon>
                         <ListItemText primary="Scrum Methodology" />
                       </ListItemButton>
+                    </List>
+                    <br/>
+                    <List>
                       <ListItemButton onClick={handleClick1}>
-                          <ListItemIcon><FiberManualRecordIcon fontSize='xs'/></ListItemIcon>
+                          <ListItemIcon><FiberManualRecordIcon color="primary" fontSize='xs'/></ListItemIcon>
                           <ListItemText primary="Languages" /> {open1 ? <ExpandLess /> : <ExpandMore />}
                       </ListItemButton>
                         <Collapse in={open1} timeout="auto" unmountOnExit>
