@@ -9,9 +9,10 @@ import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import CancelIcon from "@mui/icons-material/Cancel"
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import ContactPageIcon from '@mui/icons-material/ContactPage';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
 import {useState} from "react"
 import ListItemIcon from "@material-ui/core/ListItemIcon/ListItemIcon";
+
 
 //animateScroll as scroll
 const links = [
@@ -38,7 +39,7 @@ const links = [
     {
         id: "contact",
         text: "Contact  ",
-        icon_link: <ContactPageIcon fontSize="large"/>
+        icon_link: <ContactMailIcon fontSize="large"/>
     },
 ]
 
@@ -52,7 +53,7 @@ const Navbar = () => {
                 <img src= {Logo} className = {classes.logo} alt = "Logo" />
                 <List className = {classes.menu} >
                     {
-                        links.map(({id, text}, index) => (
+                        links.map(({id, text, icon_link}, index) => (
                             <Link key={index} 
                                 to = {id} 
                                 spy={true} 
@@ -71,8 +72,8 @@ const Navbar = () => {
             </Toolbar>
         </AppBar>
         <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-            <IconButton className={classes.closebutton} onClick = {() => setOpen(false)}>
-                <CancelIcon/>
+            <IconButton onClick = {() => setOpen(false)}>
+                <CancelIcon className={classes.closebutton} fontSize="large"/>
             </IconButton>
             <Divider/>
             {
@@ -146,10 +147,8 @@ const useStyles = makeStyles((theme) => ({
         top: 12,
         right: 20,
     },
-    closebsideutton:{
-        
+    closebutton:{
         color: "#222c76",
-        
         top: 12,
         right: 20,
     },
@@ -159,7 +158,14 @@ const useStyles = makeStyles((theme) => ({
             width: "50vw",
         },
         "& h5":{
-            margin: theme.spacing(10,0,0,4)
+            margin: theme.spacing(6,0,0,4),
+            fontSize: "1.3rem",
+            color: "#333",
+            fontWeight: "bold",
+        },
+        "& h5:hover": {
+            cursor: "pointer",
+            color: "#222c76",
         }
     }
     
