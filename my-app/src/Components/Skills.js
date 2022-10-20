@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   gridc: {
     [theme.breakpoints.down("sm")]:{
       height: "80vh",
-      margin: theme.spacing(2,3,0,-10),
+      margin: theme.spacing(2,3,0,-8),
       display: "block",
     },
     height: "80vh",
@@ -62,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "30px",
   },
   image: {
+    [theme.breakpoints.down("sm")]:{
+      display: "none",
+    },
     marginLeft: "-30px",
     marginTop: "10px"
   },

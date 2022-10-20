@@ -52,6 +52,13 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2,13,0,0),
     backgroundColor: "#292673",
   },
+  image: {
+    [theme.breakpoints.down("sm")]:{
+      width: "80%",
+      textAlign:"center",
+      marginLeft: "30px"
+    },
+  }
 }))
 
 export default Experience
