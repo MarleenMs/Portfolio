@@ -5,6 +5,7 @@ import {makeStyles} from "@material-ui/core";
 import {Paper, Typography } from '@mui/material';
 
 
+
 const Jobs= () => {
   const classes = useStyles();
   const skills =[
@@ -13,31 +14,40 @@ const Jobs= () => {
       end_date: "Present",
       title: "Systems engineering/ Developer Jr.",
       place: "Scotiabank",
-      responsabilities: [
-          "Preparation of deliverables for each phase of the project",
-          "Analyze, specify and program computer solutions",
-          "Analyze and correct incidents with a view to restoring service as soon as possible",
-          "Design solutions to problems in IT applications",
+      respnsabilities:[
+        "Preparation of deliverables for each phase of the project",
+        "Analyze, specify and program computer solutions",
+        "Analyze and correct incidents with a view to restoring service as soon as possible",
+        "Design solutions to problems in IT applications",
       ]
     },
-    
+    {
+     start_date: "August 2021",
+      end_date: "July 2022",
+      title: "Intra Trainee",
+      place: "Transplace Mexico", 
+    }
   ]
+
   return (
     <Timeline position="alternate" >
       {
-        skills.map(({year, title}, index) => (
+        skills.map(({start_date, end_date, title, place, respnsabilities}, index) => (
           <TimelineItem key={index}>
-            <TimelineOppositeContent color="text.secondary">
-                <Typography variant="h6">
-                  {year}
+            <TimelineOppositeContent color="white">
+                <Typography variant="h7">
+                  {start_date} - {end_date}
                 </Typography>
             </TimelineOppositeContent>  
             <TimelineSeparator>
-              <TimelineDot variant="outlined" color="primary" />
+              <TimelineDot variant="outlined" color="secondary" />
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent variant="h7" component="h6">
-              <Paper elevation={6} className={classes.paper}>{title}</Paper>
+              <Paper elevation={6} className={classes.paper}>
+                {title} <br/>
+                {place} <br/>
+              </Paper>
             </TimelineContent>
          </TimelineItem>
           
@@ -53,7 +63,14 @@ const useStyles = makeStyles((theme) => ({
     color: "#292673",
   },
   paper: {
-    padding: "1px 20px",
+    weight: "150px",
+    fontSize: "14px",
+    height: "60px",
+    textAlign: "left",
+    
+  },
+  listItem:{
+    fontSize:'12px',
   },
 }))
 

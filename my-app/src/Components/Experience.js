@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card, CardContent, makeStyles, Typography} from "@material-ui/core"
 import Jobs from "./Jobs.js"
+import laptop from "../Images/laptop.png"
 
 const Experience = ({title, dark, id}) => {
   const classes = useStyles();
@@ -11,7 +12,11 @@ const Experience = ({title, dark, id}) => {
             <Typography variant= "h3">{title}</Typography>
             <Card className={classes.card}>
                 <CardContent className={classes.CardContent}>
+                  <br/><br/><br/>
                   <Jobs/>
+                </CardContent>
+                <CardContent className={classes.CardContent}>
+                  <img className={classes.image} src={laptop} alt="laptop"/>
                 </CardContent>
             </Card>
         </div>
