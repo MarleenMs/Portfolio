@@ -8,7 +8,7 @@ import { List, ListItemButton, ListItemText, ListItemIcon } from '@mui/material'
 
 const OtherSkills = () => {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(!open);
