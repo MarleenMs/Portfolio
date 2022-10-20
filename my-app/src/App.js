@@ -17,12 +17,6 @@ function App() {
       <Experience title= "Experience" id= "experience" dark={false}/>
       <Skills title= "Skills" id= "skills" dark={true}/>
       <Contact title= "Contact" id= "contact" dark={false}/>
-      <header className="App-header">
-        
-      </header>
-      
-      
-
     </div>
   );
 }
