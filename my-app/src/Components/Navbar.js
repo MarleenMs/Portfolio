@@ -8,7 +8,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import CancelIcon from "@mui/icons-material/Cancel"
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+//import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import {useState} from "react"
 import ListItemIcon from "@material-ui/core/ListItemIcon/ListItemIcon";
@@ -31,11 +31,11 @@ const links = [
         text: "Skills  ",
         icon_link: <AutoFixHighIcon fontSize="large"/>
     },
-    {
+    /*{
         id: "certifications",
         text: "Certifications  ",
         icon_link: <WorkspacePremiumIcon fontSize="large"/>
-    },
+    },*/
     {
         id: "contact",
         text: "Contact  ",
@@ -61,7 +61,7 @@ const Navbar = () => {
                                 activeclass= "active" 
                                 duration={500} 
                                 offset={-80}>
-                                {text}
+                                {icon_link} {text}
                             </Link>
                         ))
                     }
@@ -128,8 +128,8 @@ const useStyles = makeStyles((theme) => ({
             color: "#333",
             fontSize: "1.2rem",
             fontWeight: "bold",
-            marginLeft: theme.spacing(3),
-            marginRight: theme.spacing(1)
+            marginLeft: theme.spacing(4),
+            marginRight: theme.spacing(4)
         },
         "& a:hover": {
             cursor: "pointer",

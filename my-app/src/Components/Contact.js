@@ -80,7 +80,8 @@ const useStyles = makeStyles((theme) => ({
     },
     height: "70vh",
     display: "flex",
-    margin: theme.spacing(2,13,0,0)
+    margin: theme.spacing(2,13,0,0),
+    backgroundColor: "#292673",
   },
   cardMedia:{
     borderRadius: "10px",

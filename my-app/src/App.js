@@ -2,7 +2,7 @@ import './App.css';
 import React from "react";
 import {makeStyles} from "@material-ui/core"
 import Navbar from './Components/Navbar';
-import Certifications from './Components/Certifications';
+//import Certifications from './Components/Certifications';
 import About from './Components/About';
 import Skills from './Components/Skills';
 import Experience from './Components/Experience';
@@ -16,8 +16,7 @@ function App() {
       <About title= "About Me" id= "about" dark={true}/>
       <Experience title= "Experience" id= "experience" dark={false}/>
       <Skills title= "Skills" id= "skills" dark={true}/>
-      <Certifications title= "Certifications" id="certifications" dark={false}/>
-      <Contact title= "Contact" id= "contact" dark={true}/>
+      <Contact title= "Contact" id= "contact" dark={false}/>
       <header className="App-header">
         
       </header>
