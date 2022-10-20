@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#f1eedb",
   },
   sectioncontent: {
-    maxWidht: "80vx",
+    minWidht: "100vx",
     marginLeft: "100px",
     "& h3": {
       margin: theme.spacing(0,0,0,6),

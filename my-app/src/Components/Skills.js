@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   sectiondark:{
     backgroundColor: "#292673",
     color: "#f1eedb",
-    minHeight: "100vh",
+    minHeight: "140vh"
   },
   sectioncontent: {
     maxWidht: "auto",
