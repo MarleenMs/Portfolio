@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
-import {Button, Card, CardContent, makeStyles, TextField, Typography} from "@material-ui/core"
+import {Button, Card, CardContent, makeStyles, Typography} from "@material-ui/core"
 import CardActions from "@material-ui/core/CardActions/CardActions";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -24,9 +24,34 @@ function Contact({title, dark, id}){
                   <CardContent className={classes.CardContent}>
                     <div className={classes.formDiv}>
                     <form className={classes.form} nonvalidate autoComplete="off">
-                      <TextField label="Your name"/> <br/>
-                      <TextField label="Your e-mail"/> <br/>
-                      <TextField label="Write a message"/> <br/>
+                      <div className={classes.row}>
+                        <div class={classes.col25}>
+                          <label class={classes.label}>Your name</label> <br/>
+                        </div>
+                        <div class={classes.col75}>
+                          <input type="text" id="fname" name="name" placeholder="Name..."></input>
+                        </div>
+                      </div>
+                        <div className={classes.row}>
+                        <div class={classes.col25}>
+                          <label class={classes.label}>Your e-mail</label> <br/>
+                        </div>
+                        <div class={classes.col75}>
+                          <input type="text" id="fmail" name="mail" placeholder="E-mail..."></input>
+                        </div>
+                      </div>
+                    <div className={classes.row}>
+                      <div class={classes.col25}>
+                        <label class={classes.label}>Write a message</label> <br/>
+                      </div>
+                      <div class={classes.col75}>
+                        <textarea id="subject" name="subject" placeholder="Write your message.." ></textarea>
+                      </div>
+                    </div>
+                    <br/>
+                    <div className={classes.row}>
+                      <input className={classes.cvButton} type="submit" value="Submit"/>
+                    </div>
                     </form>
                     </div>
 
@@ -103,7 +128,32 @@ const useStyles = makeStyles((theme) => ({
     
   },
   formDiv:{
-    
+    borderRadius: "5px",
+    backgroundColor: "#e7ebef",
+    padding: "20px",
+    width: "400px",
+  },
+  label: {
+  width: "150%",
+  paddingRight: "70px",
+  marginRight: "100px",
+  display: "inline-block",
+},
+  col25: {
+    float: "left",
+    width: "25%",
+    marginTop: "10px",
+  },
+  col75: {
+    float: "left",
+    width: "75%",
+    marginTop: "10px",
+  },
+  /* Clear floats after the columns */
+  row: {
+    content: "",
+    display: "table",
+    clear: "both",
   },
   cardMedia:{
     borderRadius: "10px",
