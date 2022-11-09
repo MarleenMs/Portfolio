@@ -27,7 +27,7 @@ const About = ({title, dark, id}) => {
                       }
                     }
                     startDelay={10}
-                    typeSpeed={100}
+                    typeSpeed={50}
                     cursorColor= "#898fb5"
                   />
                   <br/>
@@ -40,8 +40,8 @@ const About = ({title, dark, id}) => {
                         color: "#333",
                       }
                     }
-                    startDelay={2500}
-                    typeSpeed={100}
+                    startDelay={2300}
+                    typeSpeed={25}
                     cursorColor= "#898fb5"
                   />
                   <br/>
@@ -55,8 +55,8 @@ const About = ({title, dark, id}) => {
                         color: "#333",
                       }
                     }
-                    startDelay={5000}
-                    typeSpeed={50}
+                    startDelay={3500}
+                    typeSpeed={25}
                     cursorColor= "#898fb5"
                   />
                   </div>
