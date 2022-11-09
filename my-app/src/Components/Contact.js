@@ -2,8 +2,15 @@ import React, {useState} from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
-import {Button, Card, CardContent, makeStyles, Typography} from "@material-ui/core"
+import {Button, Card, CardContent, makeStyles, TextField, Typography} from "@material-ui/core"
 import CardActions from "@material-ui/core/CardActions/CardActions";
+import { withStyles } from "@material-ui/core/styles";
+
+const WhiteTextTypography = withStyles({
+  root: {
+    color: "#FFFFFF"
+  }
+})(Typography);
 
 function Contact({title, dark, id}){
     const [link, setLink] = useState(" ");
@@ -15,6 +22,19 @@ function Contact({title, dark, id}){
                 <Typography variant= "h3">{title}</Typography>
                 <Card className={classes.card}>
                   <CardContent className={classes.CardContent}>
+                    <div className={classes.formDiv}>
+                    <form className={classes.form} nonvalidate autoComplete="off">
+                      <TextField label="Your name"/> <br/>
+                      <TextField label="Your e-mail"/> <br/>
+                      <TextField label="Write a message"/> <br/>
+                    </form>
+                    </div>
+
+                    <br/><br/>
+
+                    <WhiteTextTypography variant="h5" gutterBottom align="center">
+                      Other ways to contact me
+                    </WhiteTextTypography>
                     <CardActions>
                     <Button
                         className={classes.cvButton}
@@ -80,6 +100,9 @@ const useStyles = makeStyles((theme) => ({
   CardContent:{
     textAlign: "center",
     margin: "auto",
+    
+  },
+  formDiv:{
     
   },
   cardMedia:{
