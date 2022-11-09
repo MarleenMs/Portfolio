@@ -48,7 +48,7 @@ function Contact({title, dark, id}){
                         <label class={classes.label}>Write a message</label> <br/>
                       </div>
                       <div class={classes.col75}>
-                        <textarea class={classes.input} id="subject" name="subject" placeholder="Write your message.." ></textarea>
+                        <textarea class={classes.textArea} id="subject" name="subject" placeholder="Write your message.." ></textarea>
                       </div>
                     </div>
                     <br/>
@@ -64,6 +64,7 @@ function Contact({title, dark, id}){
                     <WhiteTextTypography variant="h5" gutterBottom align="center">
                       Other ways to contact me
                     </WhiteTextTypography>
+                    <br/>
                     <CardActions>
                     <Button
                         className={classes.cvButton}
@@ -146,7 +147,16 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "100px",
     display: "inline-block",
     color: "#292673",
-},
+  },
+  textArea: {
+    height: "80px",
+    color: "#333",
+    padding: "5px 20px",
+    border: "2px solid #d3d5e3",
+    borderRadius: "4px",
+    cursor: "pointer",
+    float: "right",
+  },
   col25: {
     float: "left",
     width: "25%",
@@ -166,7 +176,7 @@ const useStyles = makeStyles((theme) => ({
   input: {
     color: "#333",
     padding: "5px 20px",
-    border: "1px solid #555",
+    border: "2px solid #d3d5e3",
     borderRadius: "4px",
     cursor: "pointer",
     float: "right",
