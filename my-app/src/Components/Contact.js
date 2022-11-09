@@ -128,16 +128,17 @@ const useStyles = makeStyles((theme) => ({
     
   },
   formDiv:{
+    boxSizing: "border-box",
     borderRadius: "5px",
     backgroundColor: "#e7ebef",
     padding: "20px",
     width: "400px",
   },
   label: {
-  width: "100%",
-  paddingRight: "70px",
-  marginRight: "100px",
-  display: "inline-block",
+    width: "100%",
+    paddingRight: "70px",
+    marginRight: "100px",
+    display: "inline-block",
 },
   col25: {
     float: "left",
