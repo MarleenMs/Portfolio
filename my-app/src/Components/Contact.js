@@ -126,6 +126,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     margin: theme.spacing(2,13,0,0),
     backgroundColor: "#292673",
+    
   },
   CardContent:{
     textAlign: "center",
