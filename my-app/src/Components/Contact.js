@@ -22,6 +22,9 @@ function Contact({title, dark, id}){
                 <Typography variant= "h3">{title}</Typography>
                 <Card className={classes.card}>
                   <CardContent className={classes.CardContent}>
+                    <WhiteTextTypography variant="h5" gutterBottom align="center">
+                      Form for contact
+                    </WhiteTextTypography>
                     <div className={classes.formDiv}>
                     <form className={classes.form} nonvalidate autoComplete="off">
                       <div className={classes.row}>
@@ -29,7 +32,7 @@ function Contact({title, dark, id}){
                           <label class={classes.label}>Your name</label> <br/>
                         </div>
                         <div class={classes.col75}>
-                          <input type="text" id="fname" name="name" placeholder="Name..."></input>
+                          <input class={classes.input} id="fname" name="name" placeholder="Name..."></input>
                         </div>
                       </div>
                         <div className={classes.row}>
@@ -37,7 +40,7 @@ function Contact({title, dark, id}){
                           <label class={classes.label}>Your e-mail</label> <br/>
                         </div>
                         <div class={classes.col75}>
-                          <input type="text" id="fmail" name="mail" placeholder="E-mail..."></input>
+                          <input class={classes.input}  id="fmail" name="mail" placeholder="E-mail..."></input>
                         </div>
                       </div>
                     <div className={classes.row}>
@@ -45,7 +48,7 @@ function Contact({title, dark, id}){
                         <label class={classes.label}>Write a message</label> <br/>
                       </div>
                       <div class={classes.col75}>
-                        <textarea id="subject" name="subject" placeholder="Write your message.." ></textarea>
+                        <textarea class={classes.input} id="subject" name="subject" placeholder="Write your message.." ></textarea>
                       </div>
                     </div>
                     <br/>
@@ -131,7 +134,7 @@ const useStyles = makeStyles((theme) => ({
   formDiv:{
     boxSizing: "border-box",
     borderRadius: "5px",
-    backgroundColor: "#e7ebef",
+    backgroundColor: "#f0f1f6",
     padding: "20px",
     width: "400px",
   },
@@ -157,6 +160,14 @@ const useStyles = makeStyles((theme) => ({
     display: "table",
     clear: "both",
   },
+  input: {
+    color: "#333",
+    padding: "5px 20px",
+    border: "1px solid #555",
+    borderRadius: "4px",
+    cursor: "pointer",
+    float: "right",
+},
   cardMedia:{
     borderRadius: "10px",
     border: "80px", 
