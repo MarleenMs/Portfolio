@@ -54,9 +54,10 @@ function Contact({title, dark, id}){
                     </div>
                     </form>
                     </div>
-
+                  </CardContent>
                     <br/><br/>
 
+                  <CardContent className={classes.CardContent}>
                     <WhiteTextTypography variant="h5" gutterBottom align="center">
                       Other ways to contact me
                     </WhiteTextTypography>
