@@ -50,7 +50,7 @@ function Contact({title, dark, id}){
                     </div>
                     <br/>
                     <div className={classes.row}>
-                      <input className={classes.cvButton} type="submit" value="Submit"/>
+                      <input className={classes.sButton} type="submit" value="Submit"/>
                     </div>
                     </form>
                     </div>
@@ -134,7 +134,7 @@ const useStyles = makeStyles((theme) => ({
     width: "400px",
   },
   label: {
-  width: "150%",
+  width: "100%",
   paddingRight: "70px",
   marginRight: "100px",
   display: "inline-block",
@@ -184,6 +184,31 @@ const useStyles = makeStyles((theme) => ({
     "& a:hover": {
       color: "white",
 
+    },
+  },
+  sButton:{
+    marginLeft: "230px",
+    width: "100px",
+    height: "25px",
+    textAlign: "center",
+    color: "#292673",
+    backgroundColor: "#f0f1f6",
+    borderRadius: "6px",
+    fontSize: "13px",
+    border: "2px solid #d3d5e3",
+    cursor: "pointer",
+    transitionDuration: "0.4s",
+    fontWeight: "bold",
+    "&:hover": {
+      backgroundColor: "#d0c3e1",
+      color: "white",
+    },
+    "& a": {
+      color: "#a186c3",
+      textDecoration: "none",
+    },
+    "& a:hover": {
+      color: "white",
     },
   },
 }))
