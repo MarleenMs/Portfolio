@@ -137,12 +137,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#f0f1f6",
     padding: "20px",
     width: "400px",
+    color: "#292673",
+    fontWeight: "bold",
   },
   label: {
     width: "100%",
     paddingRight: "70px",
     marginRight: "100px",
     display: "inline-block",
+    color: "#292673",
 },
   col25: {
     float: "left",
