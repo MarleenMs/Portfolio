@@ -155,7 +155,7 @@ const useStyles = makeStyles((theme) => ({
     sidebar:{
         width: "40vw",
         [theme.breakpoints.down("sm")]:{
-            width: "50vw",
+            width: "60vw",
         },
         "& h5":{
             margin: theme.spacing(6,0,0,4),

@@ -16,42 +16,35 @@ function Contact({title, dark, id}){
                 <Card className={classes.card}>
                   <CardContent className={classes.CardContent}>
                     <CardActions>
-                      <Button
+                    <Button
                         className={classes.cvButton}
                         onClick={() => setLink("https://www.linkedin.com/in/marleen-munoz-sala/")}
-                      ><LinkedInIcon /> LinkedIn</Button>
-          
+                      ><LinkedInIcon /> LinkedIn</Button> 
+                    <Button
+                        className={classes.cvButton}
+                        type="button"
+                        onClick={() => setLink("marleen.ms99@gmail.com")}
+                      ><EmailIcon /> Correo</Button>
                     <Button
                         className={classes.cvButton}
                         type="button"
                         onClick={() => setLink("https://github.com/MarleenMs")}
                       ><GitHubIcon/> Github</Button>  
+                    </CardActions>
 
-                    <Button
-                        className={classes.cvButton}
-                        type="button"
-                        onClick={() => setLink("marleen.ms99@gmail.com")}
-                      ><EmailIcon /> Correo</Button>   
-              </CardActions> 
-
-            <br/><br/>
             <p>
                 <a
                     className="App-link"
                     href={link}
                     target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {link}
+                    rel="noopener noreferrer">  {link}
                 </a> 
             </p>
-                  </CardContent>
-
-                </Card>
-            </div>
-            <br/>
-            
+            </CardContent>
+          </Card>
         </div>
+        <br/>    
+      </div>
     );
 }
 
@@ -78,10 +71,16 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(2,3,0,-10),
       display: "block",
     },
+    textAlign: "center",
     height: "70vh",
     display: "flex",
     margin: theme.spacing(2,13,0,0),
     backgroundColor: "#292673",
+  },
+  CardContent:{
+    textAlign: "center",
+    margin: "auto",
+    
   },
   cardMedia:{
     borderRadius: "10px",
@@ -89,9 +88,9 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "cover",
   },
   cvButton:{
-    position: "absolute",
-    bottom: 90,
-    right: 350,
+    //margin: "auto",
+    textAlign: "center",
+    //position: "fixed ",
     color: "#292673",
     backgroundColor: "#f0f1f6",
     borderRadius: "6px",
@@ -99,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid #d3d5e3",
     cursor: "pointer",
     transitionDuration: "0.4s",
-    display: "inline-block",
+    display: "flex",
     fontWeight: "bold",
     "&:hover": {
       backgroundColor: "#d0c3e1",
