@@ -66,20 +66,22 @@ function Contact({title, dark, id}){
                     </WhiteTextTypography>
                     <br/>
                     <CardActions>
+                    <div className={classes.CardContent}>
                     <Button
                         className={classes.cvButton}
                         onClick={() => setLink("https://www.linkedin.com/in/marleen-munoz-sala/")}
-                      ><LinkedInIcon /> LinkedIn</Button> 
+                      ><LinkedInIcon /> LinkedIn</Button> <br/>
                     <Button
                         className={classes.cvButton}
                         type="button"
                         onClick={() => setLink("marleen.ms99@gmail.com")}
-                      ><EmailIcon /> Correo</Button>
+                      ><EmailIcon /> Correo</Button> <br/>
                     <Button
                         className={classes.cvButton}
                         type="button"
                         onClick={() => setLink("https://github.com/MarleenMs")}
-                      ><GitHubIcon/> Github</Button>  
+                      ><GitHubIcon/> Github</Button>
+                      </div>
                     </CardActions>
 
             <p>
@@ -131,7 +133,6 @@ const useStyles = makeStyles((theme) => ({
   CardContent:{
     textAlign: "center",
     margin: "auto",
-    
   },
   formDiv:{
     boxSizing: "border-box",
@@ -190,7 +191,7 @@ const useStyles = makeStyles((theme) => ({
   cvButton:{
     //margin: "auto",
     textAlign: "center",
-    //position: "fixed ",
+    width: "150px",
     color: "#292673",
     backgroundColor: "#f0f1f6",
     borderRadius: "6px",
