@@ -16,86 +16,85 @@ function Contact({title, dark, id}){
     const [link, setLink] = useState(" ");
     const classes = useStyles();
     return(
-        <div className={`${classes.section} ${dark && classes.sectiondark}`}>
-            <div className={classes.sectioncontent} id={id}>
+      <div className={`${classes.section} ${dark && classes.sectiondark}`}>
+          <div className={classes.sectioncontent} id={id}>
+            <br/>
+            <Typography variant= "h3">{title}</Typography>
+            <Card className={classes.card}>
+              <CardContent className={classes.CardContent}>
+                <WhiteTextTypography variant="h5" gutterBottom align="center">
+                  Form for contact
+                </WhiteTextTypography>
+                <div className={classes.formDiv}>
+                <form className={classes.form} nonvalidate autoComplete="off">
+                  <div className={classes.row}>
+                    <div class={classes.col25}>
+                      <label class={classes.label}>Your name</label> <br/>
+                    </div>
+                    <div class={classes.col75}>
+                      <input class={classes.input} id="fname" name="name" placeholder="Name..."></input>
+                    </div>
+                  </div>
+                    <div className={classes.row}>
+                    <div class={classes.col25}>
+                      <label class={classes.label}>Your e-mail</label> <br/>
+                    </div>
+                    <div class={classes.col75}>
+                      <input class={classes.input}  id="fmail" name="mail" placeholder="E-mail..."></input>
+                    </div>
+                  </div>
+                <div className={classes.row}>
+                  <div class={classes.col25}>
+                    <label class={classes.label}>Write a message</label> <br/>
+                  </div>
+                  <div class={classes.col75}>
+                    <textarea class={classes.textArea} id="subject" name="subject" placeholder="Write your message.." ></textarea>
+                  </div>
+                </div>
                 <br/>
-                <Typography variant= "h3">{title}</Typography>
-                <Card className={classes.card}>
-                  <CardContent className={classes.CardContent}>
-                    <WhiteTextTypography variant="h5" gutterBottom align="center">
-                      Form for contact
-                    </WhiteTextTypography>
-                    <div className={classes.formDiv}>
-                    <form className={classes.form} nonvalidate autoComplete="off">
-                      <div className={classes.row}>
-                        <div class={classes.col25}>
-                          <label class={classes.label}>Your name</label> <br/>
-                        </div>
-                        <div class={classes.col75}>
-                          <input class={classes.input} id="fname" name="name" placeholder="Name..."></input>
-                        </div>
-                      </div>
-                        <div className={classes.row}>
-                        <div class={classes.col25}>
-                          <label class={classes.label}>Your e-mail</label> <br/>
-                        </div>
-                        <div class={classes.col75}>
-                          <input class={classes.input}  id="fmail" name="mail" placeholder="E-mail..."></input>
-                        </div>
-                      </div>
-                    <div className={classes.row}>
-                      <div class={classes.col25}>
-                        <label class={classes.label}>Write a message</label> <br/>
-                      </div>
-                      <div class={classes.col75}>
-                        <textarea class={classes.textArea} id="subject" name="subject" placeholder="Write your message.." ></textarea>
-                      </div>
-                    </div>
-                    <br/>
-                    <div className={classes.row}>
-                      <input className={classes.sButton} type="submit" value="Submit"/>
-                    </div>
-                    </form>
-                    </div>
-                  </CardContent>
-                    <br/><br/>
+                <div className={classes.row}>
+                  <input className={classes.sButton} type="submit" value="Submit"/>
+                </div>
+                </form>
+                </div>
+              </CardContent>
+                <br/><br/>
 
-                  <CardContent className={classes.CardContent}>
-                    <WhiteTextTypography variant="h5" gutterBottom align="center">
-                      Other ways to contact me
-                    </WhiteTextTypography>
-                    <br/>
-                    <CardActions>
-                    <div className={classes.CardContent}>
-                    <Button
-                        className={classes.cvButton}
-                        onClick={() => setLink("https://www.linkedin.com/in/marleen-munoz-sala/")}
-                      ><LinkedInIcon /> LinkedIn</Button> <br/>
-                    <Button
-                        className={classes.cvButton}
-                        type="button"
-                        onClick={() => setLink("marleen.ms99@gmail.com")}
-                      ><EmailIcon /> Correo</Button> <br/>
-                    <Button
-                        className={classes.cvButton}
-                        type="button"
-                        onClick={() => setLink("https://github.com/MarleenMs")}
-                      ><GitHubIcon/> Github</Button>
-                      </div>
-                    </CardActions>
+              <CardContent className={classes.CardContent}>
+                <WhiteTextTypography variant="h5" gutterBottom align="center">
+                  Other ways to contact me
+                </WhiteTextTypography>
+                <br/>
+                <CardActions>
+                <div className={classes.CardContent}>
+                <Button
+                    className={classes.cvButton}
+                    onClick={() => setLink("https://www.linkedin.com/in/marleen-munoz-sala/")}
+                  ><LinkedInIcon /> LinkedIn</Button> <br/>
+                <Button
+                    className={classes.cvButton}
+                    type="button"
+                    onClick={() => setLink("marleen.ms99@gmail.com")}
+                  ><EmailIcon /> Correo</Button> <br/>
+                <Button
+                    className={classes.cvButton}
+                    type="button"
+                    onClick={() => setLink("https://github.com/MarleenMs")}
+                  ><GitHubIcon/> Github</Button>
+                  </div>
+                </CardActions>
 
-            <p>
-                <a
-                    className="App-link"
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer">  {link}
-                </a> 
-            </p>
-            </CardContent>
-          </Card>
+        <p>
+            <a
+                className="App-link"
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer">  {link}
+            </a> 
+        </p>
+              </CardContent>
+            </Card>
         </div>
-        <br/>    
       </div>
     );
 }
@@ -119,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card:{
     [theme.breakpoints.down("sm")]:{
-      height: "80vh",
+      height: "95vh",
       margin: theme.spacing(2,3,0,-10),
       display: "block",
     },
@@ -135,6 +134,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
   },
   formDiv:{
+    [theme.breakpoints.down("sm")]:{
+      //paddingRight: "100px",
+      width: "315px",
+      display: "block",
+      padding: "10px",
+    },
     boxSizing: "border-box",
     borderRadius: "5px",
     backgroundColor: "#f0f1f6",
@@ -144,6 +149,13 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
   },
   label: {
+    [theme.breakpoints.down("sm")]:{
+      marginRight: "10px",
+      marginLeft: "5px",
+      paddingRight: "10px",
+      width: "200%",
+      textAlign: "left",
+    },
     width: "100%",
     paddingRight: "70px",
     marginRight: "100px",
@@ -151,6 +163,12 @@ const useStyles = makeStyles((theme) => ({
     color: "#292673",
   },
   textArea: {
+    [theme.breakpoints.down("sm")]:{
+      marginRight: "3px",
+      paddingRight:"30px",
+      width: "80%",
+      
+    },
     height: "80px",
     color: "#333",
     padding: "5px 20px",
@@ -160,22 +178,37 @@ const useStyles = makeStyles((theme) => ({
     float: "right",
   },
   col25: {
+    [theme.breakpoints.down("sm")]:{
+      float: "none",
+      width: "100%",
+    },
     float: "left",
     width: "25%",
     marginTop: "10px",
   },
   col75: {
+    [theme.breakpoints.down("sm")]:{
+      float: "none",
+      width: "100%",
+    },
     float: "left",
     width: "75%",
     marginTop: "10px",
   },
   /* Clear floats after the columns */
   row: {
+    [theme.breakpoints.down("sm")]:{
+      display: "block"  
+    },
     content: "",
     display: "table",
     clear: "both",
   },
   input: {
+    [theme.breakpoints.down("sm")]:{
+      float: "none",
+      width: "80%",
+    },
     color: "#333",
     padding: "5px 20px",
     border: "2px solid #d3d5e3",
@@ -215,6 +248,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   sButton:{
+    [theme.breakpoints.down("sm")]:{
+      marginLeft: "170px",
+      marginTop: "10px"
+    },
     marginLeft: "230px",
     width: "100px",
     height: "25px",
