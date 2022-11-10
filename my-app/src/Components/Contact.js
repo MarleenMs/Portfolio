@@ -28,27 +28,27 @@ function Contact({title, dark, id}){
                 <div className={classes.formDiv}>
                 <form className={classes.form} nonvalidate autoComplete="off">
                   <div className={classes.row}>
-                    <div class={classes.col25}>
-                      <label class={classes.label}>Your name</label> <br/>
+                    <div className={classes.col25}>
+                      <label className={classes.label}>Your name</label> <br/>
                     </div>
-                    <div class={classes.col75}>
-                      <input class={classes.input} id="fname" name="name" placeholder="Name..."></input>
+                    <div className={classes.col75}>
+                      <input className={classes.input} id="fname" name="name" placeholder="Name..."></input>
                     </div>
                   </div>
                     <div className={classes.row}>
-                    <div class={classes.col25}>
-                      <label class={classes.label}>Your e-mail</label> <br/>
+                    <div className={classes.col25}>
+                      <label className={classes.label}>Your e-mail</label> <br/>
                     </div>
-                    <div class={classes.col75}>
-                      <input class={classes.input}  id="fmail" name="mail" placeholder="E-mail..."></input>
+                    <div className={classes.col75}>
+                      <input className={classes.input}  id="fmail" name="mail" placeholder="E-mail..."></input>
                     </div>
                   </div>
                 <div className={classes.row}>
-                  <div class={classes.col25}>
-                    <label class={classes.label}>Write a message</label> <br/>
+                  <div className={classes.col25}>
+                    <label className={classes.label}>Write a message</label> <br/>
                   </div>
-                  <div class={classes.col75}>
-                    <textarea class={classes.textArea} id="subject" name="subject" placeholder="Write your message.." ></textarea>
+                  <div className={classes.col75}>
+                    <textarea className={classes.textArea} id="subject" name="subject" placeholder="Write your message.." ></textarea>
                   </div>
                 </div>
                 <br/>
